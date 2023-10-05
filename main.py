@@ -27,7 +27,6 @@ def main():
         data = wrangle_branches_and_members_into_json_file(branches, "test.json")
       
         branches_data_with_council_info = add_council_member_info_to_branches_list(data ,council_officials)
-        # print(branches_data_with_council_info)
 
         with open("test_council.json", "w") as f: 
             json.dump(branches_data_with_council_info, f, indent=6)
@@ -41,11 +40,3 @@ def main():
         print(err)
 main()
 
-
-        # branches = get_values(creds, "1JhfGhCE7CYGNhUdmKFAgW3h_qq4pmIUWj0rKON1cbfM", "Master List!A3:G94" )
-        # if not values:
-        #     print('No data found.')
-        #     return
-        # wrangle_branches_and_members_into_json_file(branches)
-        # for i in officials: 
-        #     print(i)
